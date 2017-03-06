@@ -4,17 +4,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
+
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Id;
 
 @Entity
 @Table(name = "campsites")
-public class Campsite {
+public class Campsite implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "campsite_no")
-	private int campsiteNo;
+	@Column(name = "campsite_no", nullable = false)
+	private Integer campsiteNo;
 
 	@Column(name = "country")
 	private String country;
@@ -29,9 +32,9 @@ public class Campsite {
 	private String street;
 
 	@Column(name = "street_no")
-	private int streetNo = 0;
+	private Integer streetNo = 0;
 	
-	@Column(name = "city")
+	@Column(name = "city", nullable = false)
 	private String city;
 	
 	@Column(name = "name")
@@ -41,10 +44,10 @@ public class Campsite {
 	private String h_region;
 	
 	@Column(name = "stars")
-	private int stars = 0;
+	private Integer stars = 0;
 	
 	@Column(name = "r_stars")
-	private int r_stars = 0;
+	private Integer r_stars = 0;
 	
 	@Column(name = "description")
 	private String description;
@@ -56,10 +59,10 @@ public class Campsite {
 	private String mail;
 	
 	@Column(name = "phone")
-	private int phone = 0;
+	private Integer phone = 0;
 	
 	@Column(name = "fax")
-	private int fax = 0;
+	private Integer fax = 0;
 	
 	//Getters and Setters
 
@@ -67,11 +70,11 @@ public class Campsite {
 		return country;
 	}
 
-	public int getCampsiteNo() {
+	public Integer getCampsiteNo() {
 		return campsiteNo;
 	}
 
-	public void setCampsiteNo(int campsiteNo) {
+	public void setCampsiteNo(Integer campsiteNo) {
 		this.campsiteNo = campsiteNo;
 	}
 
@@ -103,11 +106,11 @@ public class Campsite {
 		this.street = street;
 	}
 
-	public int getStreetNo() {
+	public Integer getStreetNo() {
 		return streetNo;
 	}
 
-	public void setStreetNo(int streetNo) {
+	public void setStreetNo(Integer streetNo) {
 		this.streetNo = streetNo;
 	}
 
@@ -135,19 +138,19 @@ public class Campsite {
 		this.h_region = h_region;
 	}
 
-	public int getStars() {
+	public Integer getStars() {
 		return stars;
 	}
 
-	public void setStars(int stars) {
+	public void setStars(Integer stars) {
 		this.stars = stars;
 	}
 
-	public int getR_stars() {
+	public Integer getR_stars() {
 		return r_stars;
 	}
 
-	public void setR_stars(int r_stars) {
+	public void setR_stars(Integer r_stars) {
 		this.r_stars = r_stars;
 	}
 
@@ -175,19 +178,19 @@ public class Campsite {
 		this.mail = mail;
 	}
 
-	public int getPhone() {
+	public Integer getPhone() {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(Integer phone) {
 		this.phone = phone;
 	}
 
-	public int getFax() {
+	public Integer getFax() {
 		return fax;
 	}
 
-	public void setFax(int fax) {
+	public void setFax(Integer fax) {
 		this.fax = fax;
 	}
 
