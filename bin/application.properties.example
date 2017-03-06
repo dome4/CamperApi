@@ -1,0 +1,8 @@
+spring.datasource.url=jdbc:mysql://localhost/database?autoReconnect=true&useSSL=false
+
+spring.datasource.username=user
+spring.datasource.password=password
+
+spring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
+
+server.servlet-path=/api
