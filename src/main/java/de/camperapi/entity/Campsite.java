@@ -12,7 +12,7 @@ import javax.persistence.Id;
 
 @Entity
 @Table(name = "campsites")
-public class Campsite implements Serializable{
+public class Campsite implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,46 +25,46 @@ public class Campsite implements Serializable{
 	@Column(name = "state")
 	private String state;
 
-	@Column(name = "ZIP")
-	private String ZIP;
+	@Column(name = "zip")
+	private String zip;
 
 	@Column(name = "street")
 	private String street;
 
 	@Column(name = "street_no")
 	private Integer streetNo = 0;
-	
+
 	@Column(name = "city", nullable = false)
 	private String city;
-	
+
 	@Column(name = "name")
 	private String name;
-	
+
 	@Column(name = "h_region")
 	private String h_region;
-	
+
 	@Column(name = "stars")
 	private Integer stars = 0;
-	
+
 	@Column(name = "r_stars")
 	private Integer r_stars = 0;
-	
+
 	@Column(name = "description")
 	private String description;
-	
+
 	@Column(name = "website")
 	private String website;
-	
+
 	@Column(name = "mail")
 	private String mail;
-	
+
 	@Column(name = "phone")
 	private Integer phone = 0;
-	
+
 	@Column(name = "fax")
 	private Integer fax = 0;
-	
-	//Getters and Setters
+
+	// Getters and Setters
 
 	public String getCountry() {
 		return country;
@@ -90,12 +90,12 @@ public class Campsite implements Serializable{
 		this.state = state;
 	}
 
-	public String getZIP() {
-		return ZIP;
+	public String getZip() {
+		return zip;
 	}
 
-	public void setZIP(String zIP) {
-		ZIP = zIP;
+	public void setZip(String zip) {
+		this.zip = zip;
 	}
 
 	public String getStreet() {
@@ -194,20 +194,19 @@ public class Campsite implements Serializable{
 		this.fax = fax;
 	}
 
-	
-	//toString
+	// toString
 	@Override
 	public String toString() {
-		return "Campsite [campsiteNo=" + campsiteNo + ", country=" + country + ", state=" + state + ", ZIP=" + ZIP
+		return "Campsite [campsiteNo=" + campsiteNo + ", country=" + country + ", state=" + state + ", zip=" + zip
 				+ ", street=" + street + ", streetNo=" + streetNo + ", city=" + city + ", name=" + name + ", h_region="
 				+ h_region + ", stars=" + stars + ", r_stars=" + r_stars + ", description=" + description + ", website="
 				+ website + ", mail=" + mail + ", phone=" + phone + ", fax=" + fax + ", getCountry()=" + getCountry()
-				+ ", getCampsiteNo()=" + getCampsiteNo() + ", getState()=" + getState() + ", getZIP()=" + getZIP()
+				+ ", getCampsiteNo()=" + getCampsiteNo() + ", getState()=" + getState() + ", getZip()=" + getZip()
 				+ ", getStreet()=" + getStreet() + ", getStreetNo()=" + getStreetNo() + ", getCity()=" + getCity()
 				+ ", getName()=" + getName() + ", getH_region()=" + getH_region() + ", getStars()=" + getStars()
 				+ ", getR_stars()=" + getR_stars() + ", getDescription()=" + getDescription() + ", getWebsite()="
 				+ getWebsite() + ", getMail()=" + getMail() + ", getPhone()=" + getPhone() + ", getFax()=" + getFax()
 				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
 				+ "]";
-	}	
+	}
 }
