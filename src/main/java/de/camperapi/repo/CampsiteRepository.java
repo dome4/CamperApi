@@ -7,7 +7,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import de.camperapi.entity.Campsite;
 
-@RepositoryRestResource
+@RepositoryRestResource(collectionResourceRel = "campsites", path = "campsites")
 public interface CampsiteRepository extends CrudRepository<Campsite, Integer> {
 
 	List<Campsite> findByCampsiteNo(@Param("campsiteNo") int campsiteNo);
