@@ -64,10 +64,21 @@ public class Campsite implements Serializable {
 	@Column(name = "fax")
 	private Integer fax = 0;
 
+	@Column(name = "img")
+	private String img;
+
 	// Getters and Setters
 
 	public String getCountry() {
 		return country;
+	}
+
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
 	}
 
 	public Integer getCampsiteNo() {
@@ -200,13 +211,13 @@ public class Campsite implements Serializable {
 		return "Campsite [campsiteNo=" + campsiteNo + ", country=" + country + ", state=" + state + ", zip=" + zip
 				+ ", street=" + street + ", streetNo=" + streetNo + ", city=" + city + ", name=" + name + ", h_region="
 				+ h_region + ", stars=" + stars + ", r_stars=" + r_stars + ", description=" + description + ", website="
-				+ website + ", mail=" + mail + ", phone=" + phone + ", fax=" + fax + ", getCountry()=" + getCountry()
-				+ ", getCampsiteNo()=" + getCampsiteNo() + ", getState()=" + getState() + ", getZip()=" + getZip()
-				+ ", getStreet()=" + getStreet() + ", getStreetNo()=" + getStreetNo() + ", getCity()=" + getCity()
-				+ ", getName()=" + getName() + ", getH_region()=" + getH_region() + ", getStars()=" + getStars()
-				+ ", getR_stars()=" + getR_stars() + ", getDescription()=" + getDescription() + ", getWebsite()="
-				+ getWebsite() + ", getMail()=" + getMail() + ", getPhone()=" + getPhone() + ", getFax()=" + getFax()
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
-				+ "]";
+				+ website + ", mail=" + mail + ", phone=" + phone + ", fax=" + fax + ", img=" + img + ", getCountry()="
+				+ getCountry() + ", getImg()=" + getImg() + ", getCampsiteNo()=" + getCampsiteNo() + ", getState()="
+				+ getState() + ", getZip()=" + getZip() + ", getStreet()=" + getStreet() + ", getStreetNo()="
+				+ getStreetNo() + ", getCity()=" + getCity() + ", getName()=" + getName() + ", getH_region()="
+				+ getH_region() + ", getStars()=" + getStars() + ", getR_stars()=" + getR_stars()
+				+ ", getDescription()=" + getDescription() + ", getWebsite()=" + getWebsite() + ", getMail()="
+				+ getMail() + ", getPhone()=" + getPhone() + ", getFax()=" + getFax() + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 	}
 }
