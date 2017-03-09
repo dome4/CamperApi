@@ -8,16 +8,16 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
 
 import de.camperapi.entity.Campsite;
-import de.camperapi.repo.CampsiteRepoRestMvcConfiguration;
 import de.camperapi.repo.CampsiteRepository;
 
 @Configuration
 @ComponentScan
 @EntityScan(basePackageClasses = {Campsite.class})
 @EnableJpaRepositories(basePackageClasses = {CampsiteRepository.class})
-@Import(CampsiteRepoRestMvcConfiguration.class)
+@Import(RepositoryRestMvcConfiguration.class)
 @EnableAutoConfiguration
 @PropertySource("application.properties")
 public class Application {
