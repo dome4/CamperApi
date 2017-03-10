@@ -60,7 +60,8 @@ public interface CampsiteRepository extends CrudRepository<Campsite, Integer> {
 	 */
 	List<Campsite> findByStars(@Param("stars") int stars);
 	
-	
+	@Override
+	Campsite save(Campsite campsite);
 	
 	
 	
