@@ -62,7 +62,5 @@ public interface CampsiteRepository extends CrudRepository<Campsite, Integer> {
 	
 	@Override
 	Campsite save(Campsite campsite);
-	
-	
-	
+
 }
